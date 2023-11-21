@@ -1,0 +1,16 @@
+{%extends 'base.html'%}{%block title%}Question {{qn+1}}{%endblock%} {%block
+content%}
+<h3>Question {{qn+1}}</h3>
+<form action="/response/new" method="POST">
+  <fieldset>
+    <legend>{{survey.questions[qn].question}}</legend>
+    {%for choice in survey.questions[qn].choices%}
+    <input type="radio" name="choices" value="{{choice}}" required="required" />
+    <label for="choice">{{choice}}</label>
+
+    {%endfor%}
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+{%endblock%}
