@@ -9,7 +9,7 @@
 </ul>
 <h4>Your respective responses were:</h4>
 <ul>
-  {%for response in responses%}
+  {%for response in session["responses"]%}
   <li>{{response}}</li>
   {%endfor%}
 </ul>

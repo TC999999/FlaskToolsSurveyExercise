@@ -2,5 +2,9 @@
 content%}
 <h2>{{survey.instructions}}</h2>
 <h3>Please Click the Link Below to Begin</h3>
-<a href="/questions/0">Start the Survey</a>
+<!-- <button></button> -->
+<form action="/start/survey" method="POST">
+  <button>Start the Survey</button>
+</form>
+<!-- <a href="/start/survey" method="POST">Start the Survey</a> -->
 {%endblock%}
